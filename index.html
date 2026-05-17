@@ -4,310 +4,260 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spotify — Investor Pitch</title>
+<title>Spotify Investor Pitch</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --green: #1DB954;
-    --black: #0a0a0a;
-    --dark: #111111;
-    --text: #ffffff;
-    --muted: #b3b3b3;
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html, body { width:100%; height:100%; background:var(--black); color:var(--text); font-family:'Space Mono',monospace; overflow:hidden; }
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--g:#1DB954;--b:#0a0a0a;--d:#111;--t:#fff;--m:#b3b3b3}
+html,body{width:100%;height:100%;background:var(--b);color:var(--t);font-family:'Space Mono',monospace;overflow:hidden}
 
-/* SLIDES */
-.slide {
-display:none; position:fixed; inset:0;
-padding: 3vh 5vw 72px;
-flex-direction:column; justify-content:center;
-animation:fadeUp .5s ease forwards;
-}
-.slide.active { display:flex; }
-@keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+/* SLIDE */
+.slide{display:none;position:fixed;inset:0;padding:3vh 5vw 68px;flex-direction:column;justify-content:center;animation:fu .45s ease forwards}
+.slide.active{display:flex}
+@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.bg1{background:radial-gradient(ellipse at 20% 50%,#1a3a1a,var(–b) 60%),radial-gradient(ellipse at 80% 20%,#0d2b0d,transparent 50%)}
+.bg2{background:linear-gradient(135deg,#0f1f0f,var(–b))}
+.bg3{background:var(–d)}
+.bg4{background:linear-gradient(160deg,#0a1a0a,var(–b) 80%)}
+.bg5{background:var(–d)}
+.bg6{background:linear-gradient(135deg,#0d1f0d,var(–b))}
+.bg7{background:var(–d)}
+.bg8{background:radial-gradient(ellipse at center,#0f2b0f,var(–b) 70%)}
 
-.bg-1 { background:radial-gradient(ellipse at 20% 50%,#1a3a1a,var(–black) 60%),radial-gradient(ellipse at 80% 20%,#0d2b0d,transparent 50%); }
-.bg-2 { background:linear-gradient(135deg,#0f1f0f,var(–black)); }
-.bg-3 { background:var(–dark); }
-.bg-4 { background:linear-gradient(160deg,#0a1a0a,var(–black) 80%); }
-.bg-5 { background:var(–dark); }
-.bg-6 { background:linear-gradient(135deg,#0d1f0d,var(–black)); }
-.bg-7 { background:var(–dark); }
-.bg-8 { background:radial-gradient(ellipse at center,#0f2b0f,var(–black) 70%); }
-
-.slide-num { position:absolute; bottom:76px; right:5vw; font-size:10px; letter-spacing:3px; color:var(–muted); }
+/* SLIDE NUM */
+.sn{position:absolute;bottom:72px;right:5vw;font-size:10px;letter-spacing:3px;color:var(–m)}
 
 /* LOGO */
-.logo { display:flex; align-items:center; gap:10px; margin-bottom:2vh; }
-.logo-icon { width:28px;height:28px;background:var(–green);border-radius:50%;display:flex;align-items:center;justify-content:center; }
-.logo-icon svg { width:16px;height:16px;fill:black; }
-.logo-text { font-size:11px;font-weight:700;letter-spacing:4px;color:var(–green);text-transform:uppercase; }
+.logo{display:flex;align-items:center;gap:10px;margin-bottom:2vh}
+.li{width:28px;height:28px;background:var(–g);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.li svg{width:16px;height:16px;fill:#000}
+.lt{font-size:11px;font-weight:700;letter-spacing:4px;color:var(–g);text-transform:uppercase}
 
 /* TYPE */
-.tag { font-size:10px;letter-spacing:4px;color:var(–green);text-transform:uppercase;margin-bottom:1.5vh;font-weight:700; }
-h1 { font-family:‘DM Serif Display’,serif; font-size:clamp(34px,6.5vh,78px); line-height:1; font-weight:400; margin-bottom:2vh; }
-h1 em { font-style:italic; color:var(–green); }
-h2 { font-family:‘DM Serif Display’,serif; font-size:clamp(24px,5vh,56px); line-height:1.05; font-weight:400; margin-bottom:1.5vh; }
-h2 em { font-style:italic; color:var(–green); }
-p { font-size:clamp(11px,1.4vh,15px); line-height:1.75; color:var(–muted); }
-.highlight { color:var(–text); font-weight:700; }
-.green { color:var(–green); }
-.divider { width:48px;height:2px;background:var(–green);margin-bottom:2vh; }
+.tag{font-size:10px;letter-spacing:4px;color:var(–g);text-transform:uppercase;margin-bottom:1.5vh;font-weight:700}
+h1{font-family:‘DM Serif Display’,serif;font-size:clamp(32px,6.5vh,76px);line-height:1;font-weight:400;margin-bottom:2vh}
+h1 em{font-style:italic;color:var(–g)}
+h2{font-family:‘DM Serif Display’,serif;font-size:clamp(22px,5vh,54px);line-height:1.05;font-weight:400;margin-bottom:1.5vh}
+h2 em{font-style:italic;color:var(–g)}
+p{font-size:clamp(11px,1.4vh,15px);line-height:1.75;color:var(–m)}
+.hl{color:var(–t);font-weight:700}
+.gr{color:var(–g)}
+.div{width:46px;height:2px;background:var(–g);margin-bottom:2vh}
 
-/* SPEAKER TAG */
-.speaker-tag { display:inline-flex;align-items:center;gap:8px;background:rgba(29,185,84,.1);border:1px solid rgba(29,185,84,.3);border-radius:4px;padding:6px 14px;margin-bottom:2vh; }
-.speaker-dot { width:7px;height:7px;border-radius:50%;background:var(–green);animation:pulse 2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
-.speaker-name { font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(–green);font-weight:700; }
+/* SPEAKER */
+.sp{display:inline-flex;align-items:center;gap:8px;background:rgba(29,185,84,.1);border:1px solid rgba(29,185,84,.3);border-radius:4px;padding:6px 14px;margin-bottom:2vh}
+.sd{width:7px;height:7px;border-radius:50%;background:var(–g);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.sn2{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(–g);font-weight:700}
 
 /* SCRIPT BOX */
-.script-box { background:rgba(255,255,255,.03);border-left:3px solid var(–green);border-radius:0 8px 8px 0;padding:clamp(10px,1.8vh,18px) clamp(12px,2vw,22px);margin-top:1vh;max-width:min(780px,92vw); }
-.script-box p { font-size:clamp(11px,1.35vh,15px); line-height:1.85; color:#d0d0d0; }
-.script-label { font-size:9px;letter-spacing:3px;color:var(–green);text-transform:uppercase;margin-bottom:8px;font-weight:700; }
+.sb{background:rgba(255,255,255,.03);border-left:3px solid var(–g);border-radius:0 8px 8px 0;padding:clamp(10px,1.8vh,18px) clamp(12px,2vw,22px);margin-top:1vh;max-width:min(780px,92vw)}
+.sb p{font-size:clamp(11px,1.35vh,15px);line-height:1.85;color:#d0d0d0}
+.sl{font-size:9px;letter-spacing:3px;color:var(–g);text-transform:uppercase;margin-bottom:8px;font-weight:700}
 
 /* GRID */
-.grid-2 { display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:1.5vh;max-width:min(900px,92vw); }
-.card { background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:clamp(10px,1.6vh,18px);position:relative;overflow:hidden; }
-.card::before { content:’’;position:absolute;top:0;left:0;right:0;height:2px;background:var(–green); }
-.card-num { font-size:9px;letter-spacing:3px;color:var(–green);margin-bottom:5px;font-weight:700; }
-.card h4 { font-family:‘DM Serif Display’,serif;font-size:clamp(15px,2.2vh,20px);margin-bottom:5px; }
-.card p { font-size:clamp(10px,1.2vh,13px);line-height:1.5; }
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:1.5vh;max-width:min(900px,92vw)}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:clamp(10px,1.6vh,18px);position:relative;overflow:hidden}
+.card::before{content:’’;position:absolute;top:0;left:0;right:0;height:2px;background:var(–g)}
+.cn{font-size:9px;letter-spacing:3px;color:var(–g);margin-bottom:5px;font-weight:700}
+.card h4{font-family:‘DM Serif Display’,serif;font-size:clamp(14px,2.2vh,20px);margin-bottom:5px}
+.card p{font-size:clamp(10px,1.2vh,13px);line-height:1.5}
 
 /* FEATURES */
-.feature-list { display:flex;flex-direction:column;gap:8px;margin-top:1.2vh;max-width:min(660px,92vw); }
-.feature-item { display:flex;align-items:flex-start;gap:12px;padding:9px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06); }
-.feature-icon { width:26px;height:26px;background:rgba(29,185,84,.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px; }
-.feature-text h4 { font-size:clamp(11px,1.3vh,14px);font-weight:700;margin-bottom:3px;letter-spacing:1px; }
-.feature-text p { font-size:clamp(10px,1.1vh,12px);line-height:1.45; }
+.fl{display:flex;flex-direction:column;gap:8px;margin-top:1.2vh;max-width:min(660px,92vw)}
+.fi{display:flex;align-items:flex-start;gap:12px;padding:9px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06)}
+.fic{width:26px;height:26px;background:rgba(29,185,84,.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px}
+.ft h4{font-size:clamp(11px,1.3vh,14px);font-weight:700;margin-bottom:3px;letter-spacing:1px}
+.ft p{font-size:clamp(10px,1.1vh,12px);line-height:1.45}
 
 /* TABLE */
-.compare-table { width:100%;max-width:min(760px,92vw);border-collapse:collapse;margin-top:1.2vh; }
-.compare-table th { font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(–muted);padding:9px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08); }
-.compare-table td { padding:10px 14px;font-size:clamp(10px,1.2vh,13px);border-bottom:1px solid rgba(255,255,255,.05);color:var(–muted); }
-.compare-table tr.spotify-row td { color:var(–text);background:rgba(29,185,84,.06); }
-.compare-table td:first-child { font-weight:700; }
-.check { color:var(–green);font-size:14px; }
-.cross { color:#ff4444;font-size:14px; }
+.ct{width:100%;max-width:min(760px,92vw);border-collapse:collapse;margin-top:1.2vh}
+.ct th{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(–m);padding:9px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
+.ct td{padding:10px 14px;font-size:clamp(10px,1.2vh,13px);border-bottom:1px solid rgba(255,255,255,.05);color:var(–m)}
+.ct tr.sr td{color:var(–t);background:rgba(29,185,84,.06)}
+.ct td:first-child{font-weight:700}
+.ck{color:var(–g);font-size:14px}
+.cx{color:#f44;font-size:14px}
 
 /* STATS */
-.stat-row { display:flex;gap:clamp(18px,4vw,48px);margin-top:2.5vh;flex-wrap:wrap; }
-.stat { display:flex;flex-direction:column;gap:4px; }
-.stat-num { font-family:‘DM Serif Display’,serif;font-size:clamp(28px,6vh,56px);color:var(–green);line-height:1; }
-.stat-label { font-size:9px;letter-spacing:2px;color:var(–muted);text-transform:uppercase; }
+.sr2{display:flex;gap:clamp(18px,4vw,48px);margin-top:2.5vh;flex-wrap:wrap}
+.st{display:flex;flex-direction:column;gap:4px}
+.stn{font-family:‘DM Serif Display’,serif;font-size:clamp(28px,6vh,56px);color:var(–g);line-height:1}
+.stl{font-size:9px;letter-spacing:2px;color:var(–m);text-transform:uppercase}
 
-/* TWO-COL */
-.two-col { display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,40px);align-items:start;margin-top:1vh; }
+/* TWO COL */
+.tc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,3vw,36px);align-items:start;margin-top:1vh}
 
-/* WAVEFORM */
-.waveform { display:flex;align-items:center;gap:3px;margin-top:2.5vh; }
-.wave-bar { width:3px;background:var(–green);border-radius:2px;opacity:.6;animation:wave 1.2s ease-in-out infinite; }
-@keyframes wave { 0%,100%{transform:scaleY(1)} 50%{transform:scaleY(.3)} }
+/* WAVE */
+.wv{display:flex;align-items:center;gap:3px;margin-top:2.5vh}
+.wb{width:3px;background:var(–g);border-radius:2px;opacity:.6;animation:wave 1.2s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.3)}}
 
-/* CLOSING */
-.closing-word { font-family:‘DM Serif Display’,serif;font-size:clamp(46px,9.5vh,108px);line-height:.9;color:var(–green);margin-bottom:2vh; }
+/* CLOSE */
+.cw{font-family:‘DM Serif Display’,serif;font-size:clamp(44px,9.5vh,106px);line-height:.9;color:var(–g);margin-bottom:2vh}
 
 /* NAV */
-nav { position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;padding:13px 20px;background:linear-gradient(transparent,rgba(0,0,0,.88));z-index:100; }
-.nav-btn { background:none;border:1px solid rgba(255,255,255,.15);color:var(–text);padding:7px 22px;font-family:‘Space Mono’,monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s; }
-.nav-btn:first-child { border-radius:4px 0 0 4px; }
-.nav-btn:last-child  { border-radius:0 4px 4px 0;border-left:none; }
-.nav-btn:hover { background:rgba(29,185,84,.15);border-color:var(–green);color:var(–green); }
-.nav-dots { display:flex;gap:5px;padding:0 14px;align-items:center; }
-.dot { width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .2s; }
-.dot.active { background:var(–green);width:18px;border-radius:3px; }
-.key-hint { position:fixed;top:14px;right:5vw;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.16);text-transform:uppercase; }
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;padding:12px 20px;background:linear-gradient(transparent,rgba(0,0,0,.9));z-index:100}
+.nb{background:none;border:1px solid rgba(255,255,255,.15);color:var(–t);padding:7px 22px;font-family:‘Space Mono’,monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.nb:first-child{border-radius:4px 0 0 4px}
+.nb:last-child{border-radius:0 4px 4px 0;border-left:none}
+.nb:hover{background:rgba(29,185,84,.15);border-color:var(–g);color:var(–g)}
+.dots{display:flex;gap:5px;padding:0 14px;align-items:center}
+.dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
+.dot.active{background:var(–g);width:18px;border-radius:3px}
+.kh{position:fixed;top:14px;right:5vw;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.15);text-transform:uppercase}
 </style>
 
 </head>
 <body>
+<span class="kh">← → to navigate</span>
 
-<span class="key-hint">← → to navigate</span>
+<!-- S1 TITLE -->
 
-<!-- SLIDE 1 -->
-
-<div class="slide bg-1 active" id="slide-1">
-  <div class="logo">
-    <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></div>
-    <span class="logo-text">Spotify</span>
-  </div>
+<div class="slide bg1 active" id="s1">
+  <div class="logo"><div class="li"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></div><span class="lt">Spotify</span></div>
   <div class="tag">Investor Pitch Presentation</div>
   <h1>The Sound<br>of <em>Your</em> Life.</h1>
-  <div class="divider"></div>
-  <p>Presented by: <span class="highlight">Sky · Nook · Praew</span></p>
-  <p style="margin-top:6px;">Global English for Entrepreneurship</p>
-  <div class="waveform">
-    <div class="wave-bar" style="height:18px;animation-delay:0s"></div>
-    <div class="wave-bar" style="height:30px;animation-delay:.1s"></div>
-    <div class="wave-bar" style="height:14px;animation-delay:.2s"></div>
-    <div class="wave-bar" style="height:34px;animation-delay:.3s"></div>
-    <div class="wave-bar" style="height:22px;animation-delay:.4s"></div>
-    <div class="wave-bar" style="height:28px;animation-delay:.5s"></div>
-    <div class="wave-bar" style="height:16px;animation-delay:.6s"></div>
-    <div class="wave-bar" style="height:32px;animation-delay:.7s"></div>
-    <div class="wave-bar" style="height:20px;animation-delay:.8s"></div>
-    <div class="wave-bar" style="height:26px;animation-delay:.9s"></div>
+  <div class="div"></div>
+  <p>Presented by: <span class="hl">Sky &nbsp;·&nbsp; Nook &nbsp;·&nbsp; Praew</span></p>
+  <p style="margin-top:6px">Global English for Entrepreneurship</p>
+  <div class="wv">
+    <div class="wb" style="height:18px;animation-delay:0s"></div>
+    <div class="wb" style="height:30px;animation-delay:.1s"></div>
+    <div class="wb" style="height:14px;animation-delay:.2s"></div>
+    <div class="wb" style="height:34px;animation-delay:.3s"></div>
+    <div class="wb" style="height:22px;animation-delay:.4s"></div>
+    <div class="wb" style="height:28px;animation-delay:.5s"></div>
+    <div class="wb" style="height:16px;animation-delay:.6s"></div>
+    <div class="wb" style="height:32px;animation-delay:.7s"></div>
+    <div class="wb" style="height:20px;animation-delay:.8s"></div>
+    <div class="wb" style="height:26px;animation-delay:.9s"></div>
   </div>
-  <div class="slide-num">01 / 08</div>
+  <div class="sn">01 / 08</div>
 </div>
 
-<!-- SLIDE 2 -->
+<!-- S2 OPENING + WHO -->
 
-<div class="slide bg-2" id="slide-2">
-  <div class="speaker-tag"><div class="speaker-dot"></div><span class="speaker-name">Sky — Opening &amp; WHO</span></div>
+<div class="slide bg2" id="s2">
+  <div class="sp"><div class="sd"></div><span class="sn2">Sky — Opening &amp; WHO</span></div>
   <h2>Have you ever<br><em>skipped every song?</em></h2>
-  <div class="divider"></div>
-  <div class="script-box">
-    <div class="script-label">Opening</div>
-    <p>"Hello everyone. Quick question — have you ever played a song and then skipped it right away? Because it just didn't <span class="highlight">feel right?</span><br><br>That happens a lot. And that is the problem we want to fix."</p>
-  </div>
-  <div class="script-box" style="margin-top:1vh;">
-    <div class="script-label">WHO</div>
-    <p>"My name is <span class="highlight">Sky</span>, and I am the co-founder of <span class="green">Spotify</span>. Spotify is a music app used by over <span class="highlight">600 million people</span> in <span class="highlight">180 countries</span>. We help people listen to the music they love — anytime, anywhere."</p>
-  </div>
-  <div class="slide-num">02 / 08</div>
+  <div class="div"></div>
+  <div class="sb"><div class="sl">Opening</div><p>"Hello everyone. Quick question — have you ever played a song and then skipped it right away? Because it just didn't <span class="hl">feel right?</span><br><br>That happens a lot. And that is the problem we want to fix."</p></div>
+  <div class="sb" style="margin-top:1vh"><div class="sl">WHO</div><p>"My name is <span class="hl">Sky</span>, and I am the co-founder of <span class="gr">Spotify</span>. Spotify is a music app used by over <span class="hl">600 million people</span> in <span class="hl">180 countries</span>. We help people listen to the music they love — anytime, anywhere."</p></div>
+  <div class="sn">02 / 08</div>
 </div>
 
-<!-- SLIDE 3 -->
+<!-- S3 PROBLEM -->
 
-<div class="slide bg-3" id="slide-3">
-  <div class="speaker-tag"><div class="speaker-dot"></div><span class="speaker-name">Sky — The Problem</span></div>
+<div class="slide bg3" id="s3">
+  <div class="sp"><div class="sd"></div><span class="sn2">Sky — The Problem</span></div>
   <h2>Other apps<br>don't <em>know</em> you.</h2>
-  <div class="divider"></div>
-  <div class="script-box">
-    <div class="script-label">The Problem</div>
-    <p>"Most music apps today show you songs that are <span class="highlight">popular</span> — not songs that are <span class="green">right for you</span>. Apps like Apple Music or YouTube Music follow what is trending. They don't really know what you like.<br><br>So users keep skipping songs. They get bored. They stop using the app. That is a big problem — for users, and for <span class="highlight">artists who want to be heard.</span>"</p>
+  <div class="div"></div>
+  <div class="sb"><div class="sl">The Problem</div><p>"Most music apps today show you songs that are <span class="hl">popular</span> — not songs that are <span class="gr">right for you</span>. Apps like Apple Music or YouTube Music follow what is trending. They don't really know what you like.<br><br>So users keep skipping songs. They get bored. They stop using the app. That is a big problem — for users, and for <span class="hl">artists who want to be heard.</span>"</p></div>
+  <div class="g2">
+    <div class="card"><div class="cn">Problem 01</div><h4>Reactive Algorithm</h4><p>Shows popular songs, not personal ones. Follows trends, not your taste.</p></div>
+    <div class="card"><div class="cn">Problem 02</div><h4>Low Engagement</h4><p>Users keep skipping. They get bored and stop discovering new music.</p></div>
   </div>
-  <div class="grid-2">
-    <div class="card"><div class="card-num">Problem 01</div><h4>Reactive Algorithm</h4><p>Shows popular songs, not personal ones. Follows trends, not your taste.</p></div>
-    <div class="card"><div class="card-num">Problem 02</div><h4>Low Engagement</h4><p>Users keep skipping. They get bored and stop discovering new music.</p></div>
-  </div>
-  <div class="slide-num">03 / 08</div>
+  <div class="sn">03 / 08</div>
 </div>
 
-<!-- SLIDE 4 -->
+<!-- S4 SOLUTION -->
 
-<div class="slide bg-4" id="slide-4">
-  <div class="speaker-tag"><div class="speaker-dot"></div><span class="speaker-name">Nook — The Solution</span></div>
+<div class="slide bg4" id="s4">
+  <div class="sp"><div class="sd"></div><span class="sn2">Nook — The Solution</span></div>
   <h2>Spotify <em>learns</em><br>who you are.</h2>
-  <div class="divider"></div>
-  <div class="script-box">
-    <div class="script-label">Solution</div>
-    <p>"Spotify uses <span class="green">AI</span> to learn your music taste. It looks at what songs you play, what songs you skip, what time of day you listen, and even <span class="highlight">how long you play each song.</span><br><br>Over time, Spotify understands you better and better."</p>
+  <div class="div"></div>
+  <div class="sb"><div class="sl">Solution</div><p>"Spotify uses <span class="gr">AI</span> to learn your music taste. It looks at what songs you play, what songs you skip, what time of day you listen, and even <span class="hl">how long you play each song.</span><br><br>Over time, Spotify understands you better and better."</p></div>
+  <div class="fl">
+    <div class="fi"><div class="fic">🗓</div><div class="ft"><h4>Discover Weekly</h4><p>Every Monday, a fresh playlist made just for you. Not popular songs. <span class="gr">Your</span> songs.</p></div></div>
+    <div class="fi"><div class="fic">🎭</div><div class="ft"><h4>Blend</h4><p>Mix your music taste with a friend into one shared playlist. Perfect for two.</p></div></div>
+    <div class="fi"><div class="fic">🤖</div><div class="ft"><h4>AI DJ</h4><p>A smart host that changes your music based on your mood — automatically.</p></div></div>
   </div>
-  <div class="feature-list">
-    <div class="feature-item"><div class="feature-icon">🗓</div><div class="feature-text"><h4>Discover Weekly</h4><p>Every Monday, a fresh playlist made just for you. Not popular songs. <span class="green">Your</span> songs.</p></div></div>
-    <div class="feature-item"><div class="feature-icon">🎭</div><div class="feature-text"><h4>Blend</h4><p>Mix your music taste with a friend into one shared playlist. Perfect for two.</p></div></div>
-    <div class="feature-item"><div class="feature-icon">🤖</div><div class="feature-text"><h4>AI DJ</h4><p>A smart host that changes your music based on your mood — automatically.</p></div></div>
-  </div>
-  <div class="slide-num">04 / 08</div>
+  <div class="sn">04 / 08</div>
 </div>
 
-<!-- SLIDE 5 -->
+<!-- S5 VALUE -->
 
-<div class="slide bg-5" id="slide-5">
-  <div class="speaker-tag"><div class="speaker-dot"></div><span class="speaker-name">Nook — Value Proposition</span></div>
+<div class="slide bg5" id="s5">
+  <div class="sp"><div class="sd"></div><span class="sn2">Nook — Value Proposition</span></div>
   <h2>The right song,<br>for the <em>right moment.</em></h2>
-  <div class="divider"></div>
-  <div class="script-box">
-    <div class="script-label">WHY IT MATTERS — Power Formula</div>
-    <p>"Unlike other apps, Spotify does not just play music. It <span class="highlight">connects</span> the right song to the right person at the right moment.<br><br><span class="green">We help music lovers around the world to always find songs they love — so that every listening experience feels personal and enjoyable.</span>"</p>
-  </div>
-  <table class="compare-table">
+  <div class="div"></div>
+  <div class="sb"><div class="sl">WHY IT MATTERS — Power Formula</div><p>"Unlike other apps, Spotify does not just play music. It <span class="hl">connects</span> the right song to the right person at the right moment.<br><br><span class="gr">We help music lovers around the world to always find songs they love — so that every listening experience feels personal and enjoyable.</span>"</p></div>
+  <table class="ct">
     <thead><tr><th>Platform</th><th>Personal AI</th><th>Mood-Based</th><th>Discovery Feature</th></tr></thead>
     <tbody>
-      <tr class="spotify-row"><td>🟢 Spotify</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td>Apple Music</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
-      <tr><td>YouTube Music</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+      <tr class="sr"><td>🟢 Spotify</td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+      <tr><td>Apple Music</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
+      <tr><td>YouTube Music</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td></tr>
     </tbody>
   </table>
-  <div class="slide-num">05 / 08</div>
+  <div class="sn">05 / 08</div>
 </div>
 
-<!-- SLIDE 6 -->
+<!-- S6 NUMBERS -->
 
-<div class="slide bg-6" id="slide-6">
-  <div class="speaker-tag"><div class="speaker-dot"></div><span class="speaker-name">Praew — The Numbers</span></div>
+<div class="slide bg6" id="s6">
+  <div class="sp"><div class="sd"></div><span class="sn2">Praew — The Numbers</span></div>
   <h2>Numbers that<br><em>prove it.</em></h2>
-  <div class="divider"></div>
-  <div class="script-box">
-    <div class="script-label">Traction</div>
-    <p>"Our users listen for an average of <span class="green">30 minutes every day</span> — almost two times more than other apps. Why? Because our AI keeps giving them songs they actually want to hear."</p>
+  <div class="div"></div>
+  <div class="sb"><div class="sl">Traction</div><p>"Our users listen for an average of <span class="gr">30 minutes every day</span> — almost two times more than other apps. Why? Because our AI keeps giving them songs they actually want to hear."</p></div>
+  <div class="sr2">
+    <div class="st"><span class="stn">600M</span><span class="stl">Active Users</span></div>
+    <div class="st"><span class="stn">240M</span><span class="stl">Premium Subscribers</span></div>
+    <div class="st"><span class="stn">$13B</span><span class="stl">Annual Revenue</span></div>
+    <div class="st"><span class="stn">20%</span><span class="stl">Growth Per Year</span></div>
   </div>
-  <div class="stat-row">
-    <div class="stat"><span class="stat-num">600M</span><span class="stat-label">Active Users</span></div>
-    <div class="stat"><span class="stat-num">240M</span><span class="stat-label">Premium Subscribers</span></div>
-    <div class="stat"><span class="stat-num">$13B</span><span class="stat-label">Annual Revenue</span></div>
-    <div class="stat"><span class="stat-num">20%</span><span class="stat-label">Growth Per Year</span></div>
-  </div>
-  <div class="slide-num">06 / 08</div>
+  <div class="sn">06 / 08</div>
 </div>
 
-<!-- SLIDE 7 -->
+<!-- S7 OPPORTUNITY + DEMO -->
 
-<div class="slide bg-7" id="slide-7">
-  <div class="speaker-tag"><div class="speaker-dot"></div><span class="speaker-name">Praew — Opportunity &amp; Demo</span></div>
+<div class="slide bg7" id="s7">
+  <div class="sp"><div class="sd"></div><span class="sn2">Praew — Opportunity &amp; Demo</span></div>
   <h2>Southeast Asia<br>is <em>our next move.</em></h2>
-  <div class="divider"></div>
-  <div class="two-col">
-    <div class="script-box" style="margin-top:0;">
-      <div class="script-label">The Opportunity</div>
-      <p>"Southeast Asia has over <span class="highlight">400 million internet users</span> — but less than <span class="green">30%</span> use music streaming. That is a huge opportunity. And Spotify is ready to lead it."</p>
-    </div>
-    <div class="script-box" style="margin-top:0;">
-      <div class="script-label">Live Demo</div>
-      <p>"Let me show you quickly. <span class="green">*(เปิดแอป)*</span> This is my Discover Weekly from this Monday. Every song was chosen by our AI — just for me. Not because it is popular. Because it matches <span class="highlight">my</span> music taste. <span class="green">*(เปิดเพลง)*</span> No skipping needed. That is the Spotify experience."</p>
-    </div>
+  <div class="div"></div>
+  <div class="tc">
+    <div class="sb" style="margin-top:0"><div class="sl">The Opportunity</div><p>"Southeast Asia has over <span class="hl">400 million internet users</span> — but less than <span class="gr">30%</span> use music streaming. That is a huge opportunity. And Spotify is ready to lead it."</p></div>
+    <div class="sb" style="margin-top:0"><div class="sl">Live Demo</div><p>"Let me show you quickly. <span class="gr">*(เปิดแอป)*</span> This is my Discover Weekly from this Monday. Every song was chosen by our AI — just for me. Not because it is popular. Because it matches <span class="hl">my</span> music taste. <span class="gr">*(เปิดเพลง)*</span> No skipping needed. That is the Spotify experience."</p></div>
   </div>
-  <div class="slide-num">07 / 08</div>
+  <div class="sn">07 / 08</div>
 </div>
 
-<!-- SLIDE 8 -->
+<!-- S8 CLOSE -->
 
-<div class="slide bg-8" id="slide-8">
-  <div class="logo">
-    <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></div>
-    <span class="logo-text">Spotify</span>
-  </div>
-  <div class="closing-word">Thank<br>You.</div>
-  <div class="script-box" style="max-width:min(700px,92vw);">
-    <div class="script-label">The Close — Martin · Nook · Praew</div>
-    <p>"We are looking for partners who want to grow with us in Southeast Asia. The market is ready. The technology is ready. We just need the right people to grow together.<br><br>After this session, we would love to talk more and show you our full business plan."</p>
-  </div>
-  <p style="margin-top:2vh;font-size:12px;color:var(--green);letter-spacing:2px;font-weight:700;">"Spotify — because every song should feel like it was made for you."</p>
-  <div class="slide-num">08 / 08</div>
+<div class="slide bg8" id="s8">
+  <div class="logo"><div class="li"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></div><span class="lt">Spotify</span></div>
+  <div class="cw">Thank<br>You.</div>
+  <div class="sb" style="max-width:min(700px,92vw)"><div class="sl">The Close — Sky · Nook · Praew</div><p>"We are looking for partners who want to grow with us in Southeast Asia. The market is ready. The technology is ready. We just need the right people to grow together.<br><br>After this session, we would love to talk more and show you our full business plan."</p></div>
+  <p style="margin-top:2vh;font-size:12px;color:var(--g);letter-spacing:2px;font-weight:700">"Spotify — because every song should feel like it was made for you."</p>
+  <div class="sn">08 / 08</div>
 </div>
 
 <!-- NAV -->
 
 <nav>
-  <button class="nav-btn" onclick="prevSlide()">← Prev</button>
-  <div class="nav-dots" id="dots"></div>
-  <button class="nav-btn" onclick="nextSlide()">Next →</button>
+  <button class="nb" onclick="prev()">← Prev</button>
+  <div class="dots" id="dots"></div>
+  <button class="nb" onclick="next()">Next →</button>
 </nav>
 
 <script>
-  const total = 8; let cur = 1;
-  const dotsEl = document.getElementById('dots');
-  for (let i=1;i<=total;i++){
-    const d=document.createElement('div');
-    d.className='dot'+(i===1?' active':'');
-    d.onclick=()=>goTo(i);
-    dotsEl.appendChild(d);
-  }
-  function goTo(n){
-    document.getElementById('slide-'+cur).classList.remove('active');
-    document.querySelectorAll('.dot')[cur-1].classList.remove('active');
-    cur=Math.max(1,Math.min(total,n));
-    document.getElementById('slide-'+cur).classList.add('active');
-    document.querySelectorAll('.dot')[cur-1].classList.add('active');
-  }
-  function nextSlide(){goTo(cur+1);}
-  function prevSlide(){goTo(cur-1);}
-  document.addEventListener('keydown',e=>{
-    if(e.key==='ArrowRight'||e.key==='ArrowDown')nextSlide();
-    if(e.key==='ArrowLeft'||e.key==='ArrowUp')prevSlide();
-  });
+const total=8;let cur=1;
+const de=document.getElementById('dots');
+for(let i=1;i<=total;i++){const d=document.createElement('div');d.className='dot'+(i===1?' active':'');d.onclick=()=>go(i);de.appendChild(d);}
+function go(n){
+  document.getElementById('s'+cur).classList.remove('active');
+  document.querySelectorAll('.dot')[cur-1].classList.remove('active');
+  cur=Math.max(1,Math.min(total,n));
+  document.getElementById('s'+cur).classList.add('active');
+  document.querySelectorAll('.dot')[cur-1].classList.add('active');
+}
+function next(){go(cur+1);}
+function prev(){go(cur-1);}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='ArrowDown')next();
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp')prev();
+});
 </script>
 
 </body>
