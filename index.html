@@ -1,126 +1,141 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spotify Investor Pitch</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--g:#1DB954;--b:#0a0a0a;--d:#111;--t:#fff;--m:#b3b3b3}
 html,body{width:100%;height:100%;background:var(--b);color:var(--t);font-family:'Space Mono',monospace;overflow:hidden}
 
 /* SLIDE */
-.slide{display:none;position:fixed;inset:0;padding:3vh 5vw 68px;flex-direction:column;justify-content:center;animation:fu .45s ease forwards}
+.slide{display:none;position:fixed;inset:0;padding:2vh 5vw 64px;flex-direction:column;justify-content:center;animation:fu .45s ease forwards}
 .slide.active{display:flex}
 @keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.bg1{background:radial-gradient(ellipse at 20% 50%,#1a3a1a,var(–b) 60%),radial-gradient(ellipse at 80% 20%,#0d2b0d,transparent 50%)}
-.bg2{background:linear-gradient(135deg,#0f1f0f,var(–b))}
-.bg3{background:var(–d)}
-.bg4{background:linear-gradient(160deg,#0a1a0a,var(–b) 80%)}
-.bg5{background:var(–d)}
-.bg6{background:linear-gradient(135deg,#0d1f0d,var(–b))}
-.bg7{background:var(–d)}
-.bg8{background:radial-gradient(ellipse at center,#0f2b0f,var(–b) 70%)}
+.bg1{background:radial-gradient(ellipse at 20% 50%,#1a3a1a,var(--b) 60%),radial-gradient(ellipse at 80% 20%,#0d2b0d,transparent 50%)}
+.bg2{background:linear-gradient(135deg,#0f1f0f,var(--b))}
+.bg3{background:var(--d)}
+.bg4{background:linear-gradient(160deg,#0a1a0a,var(--b) 80%)}
+.bg5{background:var(--d)}
+.bg6{background:linear-gradient(135deg,#0d1f0d,var(--b))}
+.bg7{background:var(--d)}
+.bg8{background:radial-gradient(ellipse at center,#0f2b0f,var(--b) 70%)}
 
 /* SLIDE NUM */
-.sn{position:absolute;bottom:72px;right:5vw;font-size:10px;letter-spacing:3px;color:var(–m)}
+.sn{position:absolute;bottom:72px;right:5vw;font-size:10px;letter-spacing:3px;color:var(--m)}
 
 /* LOGO */
-.logo{display:flex;align-items:center;gap:10px;margin-bottom:2vh}
-.li{width:28px;height:28px;background:var(–g);border-radius:50%;display:flex;align-items:center;justify-content:center}
-.li svg{width:16px;height:16px;fill:#000}
-.lt{font-size:11px;font-weight:700;letter-spacing:4px;color:var(–g);text-transform:uppercase}
+.logo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:1.2vh}
+.spotify-icon{width:40px;height:40px;flex-shrink:0}
+.lt{font-size:26px;font-weight:900;letter-spacing:-0.5px;color:#fff;font-family:'Montserrat',sans-serif;text-transform:none}
 
 /* TYPE */
-.tag{font-size:10px;letter-spacing:4px;color:var(–g);text-transform:uppercase;margin-bottom:1.5vh;font-weight:700}
-h1{font-family:‘DM Serif Display’,serif;font-size:clamp(32px,6.5vh,76px);line-height:1;font-weight:400;margin-bottom:2vh}
-h1 em{font-style:italic;color:var(–g)}
-h2{font-family:‘DM Serif Display’,serif;font-size:clamp(22px,5vh,54px);line-height:1.05;font-weight:400;margin-bottom:1.5vh}
-h2 em{font-style:italic;color:var(–g)}
-p{font-size:clamp(11px,1.4vh,15px);line-height:1.75;color:var(–m)}
-.hl{color:var(–t);font-weight:700}
-.gr{color:var(–g)}
-.div{width:46px;height:2px;background:var(–g);margin-bottom:2vh}
+.tag{font-size:12px;letter-spacing:4px;color:var(--g);text-transform:uppercase;margin-bottom:1vh;font-weight:700;text-align:center}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(38px,8vh,92px);line-height:1;font-weight:400;margin-bottom:1.2vh;text-align:center}
+h1 em{font-style:italic;color:var(--g)}
+h2{font-family:'DM Serif Display',serif;font-size:clamp(28px,6.2vh,68px);line-height:1.05;font-weight:400;margin-bottom:1vh;text-align:center}
+h2 em{font-style:italic;color:var(--g)}
+p{font-size:clamp(14px,1.7vh,18px);line-height:1.75;color:var(--m)}
+.hl{color:var(--t);font-weight:700}
+.gr{color:var(--g)}
+.div{width:46px;height:2px;background:var(--g);margin:0 auto 1.2vh}
 
 /* SPEAKER */
-.sp{display:inline-flex;align-items:center;gap:8px;background:rgba(29,185,84,.1);border:1px solid rgba(29,185,84,.3);border-radius:4px;padding:6px 14px;margin-bottom:2vh}
-.sd{width:7px;height:7px;border-radius:50%;background:var(–g);animation:pulse 2s infinite}
+.sp{display:flex;width:fit-content;margin:0 auto 1vh;align-items:center;gap:8px;background:rgba(29,185,84,.1);border:1px solid rgba(29,185,84,.3);border-radius:4px;padding:6px 16px}
+.sd{width:7px;height:7px;border-radius:50%;background:var(--g);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.sn2{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(–g);font-weight:700}
+.sn2{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--g);font-weight:700}
 
 /* SCRIPT BOX */
-.sb{background:rgba(255,255,255,.03);border-left:3px solid var(–g);border-radius:0 8px 8px 0;padding:clamp(10px,1.8vh,18px) clamp(12px,2vw,22px);margin-top:1vh;max-width:min(780px,92vw)}
-.sb p{font-size:clamp(11px,1.35vh,15px);line-height:1.85;color:#d0d0d0}
-.sl{font-size:9px;letter-spacing:3px;color:var(–g);text-transform:uppercase;margin-bottom:8px;font-weight:700}
+.sb{background:rgba(255,255,255,.03);border-left:3px solid var(--g);border-radius:0 8px 8px 0;padding:clamp(12px,1.8vh,20px) clamp(14px,2.2vw,24px);margin-top:0.6vh;max-width:min(820px,92vw);margin-left:auto;margin-right:auto}
+.sb p{font-size:clamp(14px,1.7vh,18px);line-height:1.9;color:#d0d0d0}
+.sl{font-size:9px;letter-spacing:3px;color:var(--g);text-transform:uppercase;margin-bottom:8px;font-weight:700}
 
 /* GRID */
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:1.5vh;max-width:min(900px,92vw)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:0.8vh;max-width:min(900px,92vw);margin-left:auto;margin-right:auto}
 .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:clamp(10px,1.6vh,18px);position:relative;overflow:hidden}
-.card::before{content:’’;position:absolute;top:0;left:0;right:0;height:2px;background:var(–g)}
-.cn{font-size:9px;letter-spacing:3px;color:var(–g);margin-bottom:5px;font-weight:700}
-.card h4{font-family:‘DM Serif Display’,serif;font-size:clamp(14px,2.2vh,20px);margin-bottom:5px}
-.card p{font-size:clamp(10px,1.2vh,13px);line-height:1.5}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--g)}
+.cn{font-size:10px;letter-spacing:3px;color:var(--g);margin-bottom:6px;font-weight:700}
+.card h4{font-family:'DM Serif Display',serif;font-size:clamp(17px,2.6vh,26px);margin-bottom:6px}
+.card p{font-size:clamp(13px,1.5vh,16px);line-height:1.6}
 
 /* FEATURES */
-.fl{display:flex;flex-direction:column;gap:8px;margin-top:1.2vh;max-width:min(660px,92vw)}
+.fl{display:flex;flex-direction:column;gap:6px;margin-top:0.7vh;max-width:min(700px,92vw);margin-left:auto;margin-right:auto}
 .fi{display:flex;align-items:flex-start;gap:12px;padding:9px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06)}
 .fic{width:26px;height:26px;background:rgba(29,185,84,.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px}
-.ft h4{font-size:clamp(11px,1.3vh,14px);font-weight:700;margin-bottom:3px;letter-spacing:1px}
-.ft p{font-size:clamp(10px,1.1vh,12px);line-height:1.45}
+.ft h4{font-size:clamp(14px,1.6vh,17px);font-weight:700;margin-bottom:4px;letter-spacing:1px}
+.ft p{font-size:clamp(13px,1.4vh,15px);line-height:1.5}
 
 /* TABLE */
-.ct{width:100%;max-width:min(760px,92vw);border-collapse:collapse;margin-top:1.2vh}
-.ct th{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(–m);padding:9px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
-.ct td{padding:10px 14px;font-size:clamp(10px,1.2vh,13px);border-bottom:1px solid rgba(255,255,255,.05);color:var(–m)}
-.ct tr.sr td{color:var(–t);background:rgba(29,185,84,.06)}
+.ct{width:100%;max-width:min(760px,92vw);border-collapse:collapse;margin:1.2vh auto 0}
+.ct th{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--m);padding:10px 16px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
+.ct td{padding:11px 16px;font-size:clamp(13px,1.5vh,16px);border-bottom:1px solid rgba(255,255,255,.05);color:var(--m)}
+.ct tr.sr td{color:var(--t);background:rgba(29,185,84,.06)}
 .ct td:first-child{font-weight:700}
-.ck{color:var(–g);font-size:14px}
+.ck{color:var(--g);font-size:14px}
 .cx{color:#f44;font-size:14px}
 
 /* STATS */
-.sr2{display:flex;gap:clamp(18px,4vw,48px);margin-top:2.5vh;flex-wrap:wrap}
+.sr2{display:flex;gap:clamp(14px,3vw,36px);margin-top:1.2vh;flex-wrap:wrap;justify-content:center}
 .st{display:flex;flex-direction:column;gap:4px}
-.stn{font-family:‘DM Serif Display’,serif;font-size:clamp(28px,6vh,56px);color:var(–g);line-height:1}
-.stl{font-size:9px;letter-spacing:2px;color:var(–m);text-transform:uppercase}
+.stn{font-family:'DM Serif Display',serif;font-size:clamp(34px,7vh,64px);color:var(--g);line-height:1;text-align:center}
+.stl{font-size:11px;letter-spacing:2px;color:var(--m);text-transform:uppercase;text-align:center}
 
 /* TWO COL */
-.tc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,3vw,36px);align-items:start;margin-top:1vh}
+.tc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,3vw,36px);align-items:start;margin-top:1vh;max-width:min(920px,92vw);margin-left:auto;margin-right:auto}
 
 /* WAVE */
-.wv{display:flex;align-items:center;gap:3px;margin-top:2.5vh}
-.wb{width:3px;background:var(–g);border-radius:2px;opacity:.6;animation:wave 1.2s ease-in-out infinite}
+.wv{display:flex;align-items:center;justify-content:center;gap:3px;margin-top:1.4vh}
+.wb{width:3px;background:var(--g);border-radius:2px;opacity:.6;animation:wave 1.2s ease-in-out infinite}
 @keyframes wave{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.3)}}
 
 /* CLOSE */
-.cw{font-family:‘DM Serif Display’,serif;font-size:clamp(44px,9.5vh,106px);line-height:.9;color:var(–g);margin-bottom:2vh}
+.cw{font-family:'DM Serif Display',serif;font-size:clamp(44px,9.5vh,106px);line-height:.9;color:var(--g);margin-bottom:2vh;text-align:center}
 
 /* NAV */
 nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;padding:12px 20px;background:linear-gradient(transparent,rgba(0,0,0,.9));z-index:100}
-.nb{background:none;border:1px solid rgba(255,255,255,.15);color:var(–t);padding:7px 22px;font-family:‘Space Mono’,monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.nb{background:none;border:1px solid rgba(255,255,255,.15);color:var(--t);padding:7px 22px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s}
 .nb:first-child{border-radius:4px 0 0 4px}
 .nb:last-child{border-radius:0 4px 4px 0;border-left:none}
-.nb:hover{background:rgba(29,185,84,.15);border-color:var(–g);color:var(–g)}
+.nb:hover{background:rgba(29,185,84,.15);border-color:var(--g);color:var(--g)}
 .dots{display:flex;gap:5px;padding:0 14px;align-items:center}
 .dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
-.dot.active{background:var(–g);width:18px;border-radius:3px}
+.dot.active{background:var(--g);width:18px;border-radius:3px}
 .kh{position:fixed;top:14px;right:5vw;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.15);text-transform:uppercase}
+.nbp{background:none;border:1px solid rgba(29,185,84,.5);color:var(--g);padding:7px 18px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;border-radius:4px;margin-left:10px}
+.nbp:hover{background:rgba(29,185,84,.15)}
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{overflow:visible!important;height:auto!important}
+  nav,.kh,.nbp{display:none!important}
+  .slide{
+    display:flex!important;
+    position:static!important;
+    width:100vw!important;
+    height:100vh!important;
+    page-break-after:always!important;
+    break-after:page!important;
+    animation:none!important;
+    opacity:1!important;
+    transform:none!important
+  }
+  .sn{position:absolute;bottom:16px;right:5vw}
+}
 </style>
-
 </head>
 <body>
 <span class="kh">← → to navigate</span>
 
 <!-- S1 TITLE -->
-
 <div class="slide bg1 active" id="s1">
-  <div class="logo"><div class="li"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></div><span class="lt">Spotify</span></div>
+  <div class="logo"><svg class="spotify-icon" viewBox="0 0 24 24" fill="#1DB954" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg><span class="lt">Spotify</span></div>
   <div class="tag">Investor Pitch Presentation</div>
   <h1>The Sound<br>of <em>Your</em> Life.</h1>
   <div class="div"></div>
-  <p>Presented by: <span class="hl">Sky &nbsp;·&nbsp; Nook &nbsp;·&nbsp; Praew</span></p>
-  <p style="margin-top:6px">Global English for Entrepreneurship</p>
+  <p style="text-align:center">Presented by: <span class="hl">Sky &nbsp;·&nbsp; Nook &nbsp;·&nbsp; Praew</span></p>
+  <p style="margin-top:6px;text-align:center">Global English for Entrepreneurship</p>
   <div class="wv">
     <div class="wb" style="height:18px;animation-delay:0s"></div>
     <div class="wb" style="height:30px;animation-delay:.1s"></div>
@@ -137,7 +152,6 @@ nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justi
 </div>
 
 <!-- S2 OPENING + WHO -->
-
 <div class="slide bg2" id="s2">
   <div class="sp"><div class="sd"></div><span class="sn2">Sky — Opening &amp; WHO</span></div>
   <h2>Have you ever<br><em>skipped every song?</em></h2>
@@ -148,7 +162,6 @@ nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justi
 </div>
 
 <!-- S3 PROBLEM -->
-
 <div class="slide bg3" id="s3">
   <div class="sp"><div class="sd"></div><span class="sn2">Sky — The Problem</span></div>
   <h2>Other apps<br>don't <em>know</em> you.</h2>
@@ -162,7 +175,6 @@ nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justi
 </div>
 
 <!-- S4 SOLUTION -->
-
 <div class="slide bg4" id="s4">
   <div class="sp"><div class="sd"></div><span class="sn2">Nook — The Solution</span></div>
   <h2>Spotify <em>learns</em><br>who you are.</h2>
@@ -177,7 +189,6 @@ nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justi
 </div>
 
 <!-- S5 VALUE -->
-
 <div class="slide bg5" id="s5">
   <div class="sp"><div class="sd"></div><span class="sn2">Nook — Value Proposition</span></div>
   <h2>The right song,<br>for the <em>right moment.</em></h2>
@@ -195,7 +206,6 @@ nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justi
 </div>
 
 <!-- S6 NUMBERS -->
-
 <div class="slide bg6" id="s6">
   <div class="sp"><div class="sd"></div><span class="sn2">Praew — The Numbers</span></div>
   <h2>Numbers that<br><em>prove it.</em></h2>
@@ -211,7 +221,6 @@ nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justi
 </div>
 
 <!-- S7 OPPORTUNITY + DEMO -->
-
 <div class="slide bg7" id="s7">
   <div class="sp"><div class="sd"></div><span class="sn2">Praew — Opportunity &amp; Demo</span></div>
   <h2>Southeast Asia<br>is <em>our next move.</em></h2>
@@ -224,21 +233,37 @@ nav{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justi
 </div>
 
 <!-- S8 CLOSE -->
-
 <div class="slide bg8" id="s8">
-  <div class="logo"><div class="li"><svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></div><span class="lt">Spotify</span></div>
+  <div class="logo"><svg class="spotify-icon" viewBox="0 0 24 24" fill="#1DB954" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg><span class="lt">Spotify</span></div>
   <div class="cw">Thank<br>You.</div>
-  <div class="sb" style="max-width:min(700px,92vw)"><div class="sl">The Close — Sky · Nook · Praew</div><p>"We are looking for partners who want to grow with us in Southeast Asia. The market is ready. The technology is ready. We just need the right people to grow together.<br><br>After this session, we would love to talk more and show you our full business plan."</p></div>
-  <p style="margin-top:2vh;font-size:12px;color:var(--g);letter-spacing:2px;font-weight:700">"Spotify — because every song should feel like it was made for you."</p>
+  <div style="display:flex;gap:14px;margin-top:1.6vh;max-width:min(860px,92vw)">
+    <div style="flex:1;background:rgba(29,185,84,.08);border:1.5px solid rgba(29,185,84,.3);border-radius:10px;padding:16px 20px">
+      <div style="font-size:9px;letter-spacing:3px;color:#1DB954;text-transform:uppercase;margin-bottom:10px;font-weight:700">Sky</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:clamp(16px,2.2vh,24px);color:#fff;margin-bottom:8px;line-height:1.3">สุรสีห์ คงบัว</div>
+      <div style="font-size:clamp(12px,1.5vh,16px);color:#b3b3b3;letter-spacing:1px;font-family:'Space Mono',monospace">6812633100006</div>
+    </div>
+    <div style="flex:1;background:rgba(29,185,84,.08);border:1.5px solid rgba(29,185,84,.3);border-radius:10px;padding:16px 20px">
+      <div style="font-size:9px;letter-spacing:3px;color:#1DB954;text-transform:uppercase;margin-bottom:10px;font-weight:700">Praew</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:clamp(16px,2.2vh,24px);color:#fff;margin-bottom:8px;line-height:1.3">พัชราภรณ์ ประไพวรรณ</div>
+      <div style="font-size:clamp(12px,1.5vh,16px);color:#b3b3b3;letter-spacing:1px;font-family:'Space Mono',monospace">6812633200014</div>
+    </div>
+    <div style="flex:1;background:rgba(29,185,84,.08);border:1.5px solid rgba(29,185,84,.3);border-radius:10px;padding:16px 20px">
+      <div style="font-size:9px;letter-spacing:3px;color:#1DB954;text-transform:uppercase;margin-bottom:10px;font-weight:700">Nook</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:clamp(16px,2.2vh,24px);color:#fff;margin-bottom:8px;line-height:1.3">นพมาศ บุญวงค์</div>
+      <div style="font-size:clamp(12px,1.5vh,16px);color:#b3b3b3;letter-spacing:1px;font-family:'Space Mono',monospace">6812633200012</div>
+    </div>
+  </div>
+  <div class="sb" style="max-width:min(860px,92vw);margin-top:1.4vh"><div class="sl">The Close — Sky · Nook · Praew</div><p style="font-size:clamp(13px,1.7vh,18px);line-height:1.9">"We are looking for partners who want to grow with us in Southeast Asia. The market is ready. The technology is ready. We just need the right people to grow together.<br><br>After this session, we would love to talk more and show you our full business plan."</p></div>
+  <p style="margin-top:1.4vh;font-size:clamp(13px,1.6vh,17px);color:var(--g);letter-spacing:1.5px;font-weight:700">"Spotify — because every song should feel like it was made for you."</p>
   <div class="sn">08 / 08</div>
 </div>
 
 <!-- NAV -->
-
 <nav>
   <button class="nb" onclick="prev()">← Prev</button>
   <div class="dots" id="dots"></div>
   <button class="nb" onclick="next()">Next →</button>
+  <button class="nbp" onclick="window.print()">⎙ Print PDF</button>
 </nav>
 
 <script>
@@ -259,6 +284,5 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft'||e.key==='ArrowUp')prev();
 });
 </script>
-
 </body>
 </html>
